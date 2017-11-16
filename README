@@ -1,0 +1,26 @@
+/*
+ * Name: Ziying Hu & Xiaolong Zhou
+ * Login: cs100vat & cs100vcc
+ * Date: Aug 4, 2016
+ * File: README
+ */
+
+
+1. d must be a constant lvalue reference, because a non-constant lvalue 
+reference can only be assinged by lvalue. By adding const in front, d 
+is a constant lvalue reference, thus it can be assigned by rvalue also. 
+
+2.
+a) The post-increment operator takes an int argument is actually a 
+dummy parameter, which is used to distinguish pre-increment and
+post-increment. Therefore, when using ++, it can know whether its 
+pre-increment or post-increment.
+
+b) The pre-increment operator increase the value of object and return 
+a reference because the state of object operated and that returned is
+the same. The post-increment, though, needs to return the old value 
+of the object instead of the updated value object. Thus, a copy of the 
+old object has been made before increment since the reference has been 
+updated. If returning the reference, the updated value object would be
+returned. Thus, a copy of the BSTIterator would return the old value 
+object as required.
